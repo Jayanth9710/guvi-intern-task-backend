@@ -11,9 +11,12 @@ dotenv.config();
 
 app.use(express.json());
 
-app.use((cors({
-    origin:'*'
-})))
+const corsOptions ={
+    origin:'*', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 mongoose.connect(process.env.MONGO_URI,{useNewUrlParser:true,useUnifiedTopology:true})
 

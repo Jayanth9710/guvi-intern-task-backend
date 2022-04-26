@@ -4,7 +4,7 @@ import mongoose  from'mongoose'
 const app = express();
 import dotenv from'dotenv';
 const PORT = process.env.PORT || 8080
-import router from"./Routes/userRoutes.js";
+import router from"./Routes/UserRoutes.js";
 
 
 dotenv.config();
